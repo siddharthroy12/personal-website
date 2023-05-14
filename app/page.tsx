@@ -17,22 +17,12 @@ const TITLES = [
 ];
 
 export default function Home() {
-  const [titleIndex, setTitleIndex] = React.useState(0);
   const [showAnimatedTitle, setShowAnimatedTitle] = React.useState(false);
 
   React.useEffect(() => {
-    let intervalId: any = "";
     setTimeout(() => {
       setShowAnimatedTitle(true);
-      intervalId = setInterval(
-        () => {
-          setTitleIndex((titleIndex) => titleIndex + 1);
-        },
-        1000 // every 3 seconds
-      );
-    }, 500);
-
-    return () => clearTimeout(intervalId);
+    }, 1000);
   }, []);
 
   return (
@@ -62,6 +52,7 @@ export default function Home() {
         }}
       >
         <TextLoop
+        delay={0}
           children={TITLES.map((title) => (
             <div key={title} className="w-screen text-center">
               {title}
