@@ -3,7 +3,7 @@ import { Navigation } from "../components/nav";
 import { Card } from "../components/card";
 import { Article } from "./article";
 
-const repos = ["Agrus", "recoded", "Gravity-Sandbox", "TouchTyper"];
+const repos = ["Agrus", "recoded", "Gravity-Sandbox", "TouchTyper", "sr_resolve", "Rockets"];
 
 export type RepoDetails = {
   title: string;
